@@ -158,9 +158,9 @@ if __name__ == "__main__":
     print(api.available)
     print(passKey)
 
-    EUGENE_ID = '***REMOVED***'
-    EUGENE_PWD = '***REMOVED***'
-    EUGENE_CERT_PWD = '***REMOVED***'
+    EUGENE_ID = 'USE OWN ID'
+    EUGENE_PWD = 'USE OWN PWD'
+    EUGENE_CERT_PWD = 'USE OWN CERT PWD'
 
     print('first login - 제대로 계좌 정보 수신 못함.')
     api.comm_login_partner(passKey, EUGENE_ID, EUGENE_PWD, EUGENE_CERT_PWD)
