@@ -16,11 +16,13 @@ EUGENE_CERT_PWD = 'USE OWN CERT PWD'
 test.py 의 해당 내용을 사용할 계정 정보로 수정하여 실행.
 
 ## 가상 환경 설정 실행 방법
-정상적인 프로그램 실행을 위하여 **관리자 권한**으로 실행해야 합니다.
+정상적인 프로그램 실행을 위하여 `관리자 권한` 으로 실행해야 합니다.
 ```bash
 git clone https://github.com/Alpha-RPA/eugene-api-test # 레파지토리 복사
 cd eugene-api-test                                     # 레파지토리 폴더 이동
-python -m pip install virtualenv                       # 가상 환경을 사용하기 위한 모듈 설치, python path가 python3.10.9 32bit 임을 분명하게 해야합니다.
+
+# python path가 python3.10.9 32bit 임을 분명하게 해야합니다.
+python -m pip install virtualenv                       # 가상 환경을 사용하기 위한 모듈 설치
 python -m virtualenv venv                              # 가상 환경 생성
 .\venv\Scripts\activate                                # 가상 환경 활성화
 pip install -r .\requirements.txt                      # 실행을 위한 모듈 설치
