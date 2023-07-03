@@ -1,18 +1,34 @@
 # eugene-api-test
 유진투자증권 OPENAPI 연동 테스트
 
-## 개발 환경 및 가상 환경 설정
+## 개발 환경
 - OS : windows 10
 - Python 3.10.9 (32bit)
 - 유진투자증권 CHAMPION OPENAPI 설치
 - 사용자 공인인증서 필요
-- 실행 방법
+
+## 유진 계정 설정
+```
+EUGENE_ID = 'USE OWN ID'
+EUGENE_PWD = 'USE OWN PWD'
+EUGENE_CERT_PWD = 'USE OWN CERT PWD'
+```
+위 코드의 해당 string 을 수정하여 사용.
+
+## 가상 환경 설정 실행 방법
 ```bash
 python -m virtualenv venv # python path가 python3.10.9 32bit 임을 분명하게 해야합니다.
 .\venv\Scripts\activate
 pip install -r .\requirements.txt
 python test.py
 ```
+
+## EXE 생성
+```
+pyinstaller -F --uac-admin .\test.py
+```
+폴더 내 dist/test.exe 생성
+
 
 ### 현상 
 - 현상python 스크립트 직접 실행시 버전 처리 후 CommLoginPatrtner 함수를 사용해 로그인 가능
