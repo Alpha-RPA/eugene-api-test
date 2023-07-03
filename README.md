@@ -47,8 +47,8 @@ pyinstaller -F --uac-admin .\test.py
 ### 현상 - 빌드 후 - pyinstaller를 통해 exe 생성 후 실행
 - dist/test.exe를 실행하면 정상 동작 안함
 - 빌드 한 exe를 openapi가 설치 된 폴더 내에 위치하고 실행 시 정상 동작 함
-- exe 실행 시 해당 폴더에 EULog가 생성되고 내부에 실행 파일 명을 기준으로 log 파일이 생성 됨.
-- 해당 log 파일 내부에는 다음과 같은 로그 발생
+- exe 실행 시 파일이 위치하고 있는 폴더에 EULog 폴더가 생성되고 내부에 실행 파일 명을 기준으로 log 파일이 생성 됨.
+- log 파일 내용
 ```
 ====== 로그 시작 ======
 INF_2:2023/07/02 [21:45:03:755] CommInit START
