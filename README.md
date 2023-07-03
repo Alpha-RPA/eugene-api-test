@@ -33,9 +33,9 @@ python test.py                                         # 실행
 ```
 pyinstaller -F --uac-admin .\test.py
 ```
-폴더 내 dist/test.exe 생성
-해당 폴더에서 실행 시 정상 동작 안함.
-C:\EugeneFN\ChampionOPENAPI 내에 복사하여 실행 시 정상 동작
+- 폴더 내 dist/test.exe 생성
+- 해당 폴더에서 실행 시 정상 동작 안함.
+- C:\EugeneFN\ChampionOPENAPI 내에 복사하여 실행 시 정상 동작
 
 
 ### 현상 
