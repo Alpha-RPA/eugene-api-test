@@ -13,14 +13,17 @@ EUGENE_ID = 'USE OWN ID'
 EUGENE_PWD = 'USE OWN PWD'
 EUGENE_CERT_PWD = 'USE OWN CERT PWD'
 ```
-위 코드의 해당 string 을 수정하여 사용.
+test.py 의 해당 내용을 사용할 계정 정보로 수정하여 실행.
 
 ## 가상 환경 설정 실행 방법
 ```bash
-python -m virtualenv venv # python path가 python3.10.9 32bit 임을 분명하게 해야합니다.
-.\venv\Scripts\activate
-pip install -r .\requirements.txt
-python test.py
+git clone https://github.com/Alpha-RPA/eugene-api-test # 레파지토리 복사
+cd eugene-api-test # 레파지토리 폴더 이동
+python -m pip install virtualenv # 가상 환경을 사용하기 위한 모듈 설치, python path가 python3.10.9 32bit 임을 분명하게 해야합니다.
+python -m virtualenv venv # 가상 환경 생성
+.\venv\Scripts\activate # 가상 환경 활성화
+pip install -r .\requirements.txt # 실행을 위한 모듈 설치
+python test.py # 실행
 ```
 
 ## EXE 생성
