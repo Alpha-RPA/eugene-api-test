@@ -58,6 +58,16 @@ INF_2:2023/07/02 [21:45:04:841] MCI_INIT[00000010I003509AE1]
 ```
 
 ### 추가적으로 확인하고 싶은 사항
-- 버전 처리 프로그램에서 api 키 값을 생성할 때 
-  - 입력으로 주어진 핸들 값에 따라 영향을 받는 부분
-  - current working directory 같은 환경도 이 때 세팅이 되는지
+1. 버전 처리 프로그램에서 api 키 값을 생성할 때
+   - 입력으로 주어진 핸들 값에 따라 영향을 받는 부분
+   - current working directory 같은 환경도 이 때 세팅이 되는지
+2. CommLoginPartner 의 동작 원리
+
+### 현재 접근 방식 - update 2023-07-03 PM 06:47
+- OPENAPI 폴더 내에 배치하는 경우 정상 동작을 하는 것을 기반으로 어떤 파일을 참조하는지 전수 조사
+- 현재의 경우에는 nsldap32v11.dll 을 해당 폴더에 같이 배치하면 동작 하는 것을 확인
+  - nsldap32v11.dll
+    - Netscape Communications Corporation에서 제공하는 Lightweight Directory Access Protocol DLL 모듈입니다.
+    - 관공서, 인터넷 뱅킹, 보험사 웹사이트 이용시 설치될수 있습니다.
+- 위의 dll을 pyinstaller를 이용하여 exe를 생성할 때 포함시키면 해결
+  - dll이 업데이트 되거나 다른 예상치 못한 상황에서 안정성을 `보장하지 못함`
